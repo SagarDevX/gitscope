@@ -1,69 +1,73 @@
-import Image from "next/image";
+import Navbar from '@/components/Navbar'
+import Stats from '@/components/Stats'
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className=''>
+      <Navbar />
+      <div className='min-h-fit bg-[#faf8f2] rounded-xl'>
+        <div className="relative overflow-hidden min-h-140 md:min-h-175 bg-brandBlack rounded-2xl">
+          <div
+            className="absolute inset-0 pointer-events-none blur-[35px] md:blur-[50px]"
+            style={{
+              background:
+                "radial-gradient(ellipse 120% 145% at 50% -50%, rgba(0,0,0,0) 60%, rgba(91,255,77,1) 75%, rgba(0,0,0,0) 85%)",
+              mixBlendMode: "screen",
+            }}
+            aria-hidden="true"
+          ></div>
+          <div
+            className="absolute inset-0 pointer-events-none blur-[188px] md:blur-[260px] opacity-[0.74]"
+            style={{
+              background:
+                "radial-gradient(ellipse 120% 145% at 50% -50%, rgba(0,0,0,0) 55%, rgba(91,255,77,1,0.5) 80%, rgba(0,0,0,0) 100%)",
+              mixBlendMode: "screen",
+            }}
+            aria-hidden="true"
+          ></div>
+
+          <div
+            className="absolute inset-0 pointer-events-none blur-[30px] md:blur-[43px] opacity-[0.94]"
+            style={{
+              background:
+                "radial-gradient(ellipse 120% 145% at 50% -50%, rgba(0,0,0,0) 83.5%, #7a9997 84.5%, rgba(0,0,0,0) 85.5%)",
+              mixBlendMode: "screen",
+            }}
+            aria-hidden="true"
+          ></div>
+
+          <div className="absolute size-full flex flex-col items-center justify-center text-white z-10 ">
+            {/* Your content */}
+            <div className='text-center'>
+              <h1 className='tracking-tight leading-[0.9] text-6xl font-semibold '>
+                Explore <span className='font-wendy text-brand font-extralight tracking-normal'>GitHub</span><br />
+                Developers
+              </h1>
+
+              <p className='w-xl mt-2 text-lg leading-tight tracking-tight text-neutral-100'>Explore GitHub developers, understand their work,<br /> and discover meaningful insights.</p>
+
+
+              <form className='w-fit bg-brandBlack my-4 text-xl mx-auto p-1 flex flex-row items-center justify-center gap-8 rounded-xl'>
+                <input
+                  type="text"
+                  placeholder="Search GitHub username..." 
+                  className='text-lg rounded-md px-2 py-1.5 focus:outline-none'
+                />
+
+                <button type="submit"  className='bg-brand px-2 py-1.5 rounded-xl cursor-pointer hover:bg-brandHover transition-colors duration-300 shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]'>
+                  Explore →
+                </button>
+              </form>
+            </div>
+
+
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
+         <Stats/>
     </div>
-  );
+  )
 }
+
+export default page
