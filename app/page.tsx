@@ -8,7 +8,7 @@ const page = () => {
     <div className=''>
       <Navbar />
       <div className='min-h-fit bg-[#faf8f2] rounded-xl'>
-        <div className="relative overflow-hidden min-h-140 md:min-h-175 bg-brandBlack rounded-2xl">
+        <div className="relative overflow-hidden min-h-140 md:min-h-175 bg-brandBlack sm:rounded-2xl">
           <div
             className="absolute inset-0 pointer-events-none blur-[35px] md:blur-[50px]"
             style={{

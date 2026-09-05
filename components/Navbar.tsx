@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isOpen, setisOpen] = useState(false)
     return (
         <div className="relative">
-            <div className=" text-xl flex flex-row justify-between items-center text-brandBlack">
+            <div className=" text-xl flex flex-row justify-between items-center text-brandBlack px-4 sm:px-0">
                 <div>
                     <h1 className='font-wendy font-thin text-4xl py-4'>Git<span className='text-brand'>Scope</span></h1>
                 </div>

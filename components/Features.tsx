@@ -63,7 +63,7 @@ const Features = () => {
         </span>
       </div>
 
-      <div className="mx-auto w-fit text-center">
+      <div className="mx-auto w-fit text-center text-brandBlack">
         <h1 className="text-xl font-semibold md:text-4xl">
           Explore <span className="text-brand">beyond </span>
           the profile
