@@ -1,3 +1,4 @@
+import Features from '@/components/Features'
 import Navbar from '@/components/Navbar'
 import Stats from '@/components/Stats'
 import React from 'react'
@@ -38,24 +39,34 @@ const page = () => {
           ></div>
 
           <div className="absolute size-full flex flex-col items-center justify-center text-white z-10 ">
-            {/* Your content */}
+            <div className="mx-auto hidden sm:flex w-fit items-center gap-2 rounded-full border border-neutral-400 px-3 py-1.5 mb-4">
+              <span className="relative flex size-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
+                <span className="relative inline-flex size-2.5 rounded-full bg-brand" />
+              </span>
+
+              <span className="text-xs font-medium text-green-500">
+                FOR DEVELOPERS, BY DEVELOPERS
+              </span>
+            </div>
+
             <div className='text-center'>
-              <h1 className='tracking-tight leading-[0.9] text-6xl font-semibold '>
-                Explore <span className='font-wendy text-brand font-extralight tracking-normal'>GitHub</span><br />
+              <h1 className='tracking-tight leading-[0.9] text-3xl sm:text-6xl font-semibold '>
+                Explore <span className='font-wendy text-brand font-extralight tracking-normal '>GitHub</span><br />
                 Developers
               </h1>
 
-              <p className='w-xl mt-2 text-lg leading-tight tracking-tight text-neutral-100'>Explore GitHub developers, understand their work,<br /> and discover meaningful insights.</p>
+              <p className='mx-auto w-72 sm:w-xl mt-2 text-md sm:text-lg leading-tight tracking-tight text-neutral-100'>Explore GitHub developers, understand their work,<br /> and discover meaningful insights.</p>
 
 
-              <form className='w-fit bg-brandBlack my-4 text-xl mx-auto p-1 flex flex-row items-center justify-center gap-8 rounded-xl'>
+              <form className='w-fit sm:bg-brandBlack my-4 text-md sm:text-xl mx-auto p-1 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-8 rounded-xl'>
                 <input
                   type="text"
-                  placeholder="Search GitHub username..." 
-                  className='text-lg rounded-md px-2 py-1.5 focus:outline-none'
+                  placeholder="Search GitHub username..."
+                  className='text-lg rounded-md px-2 py-1.5 sm:focus:outline-none border-2 border-neutral-700 sm:border-0'
                 />
 
-                <button type="submit"  className='bg-brand px-2 py-1.5 rounded-xl cursor-pointer hover:bg-brandHover transition-colors duration-300 shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]'>
+                <button type="submit" className='bg-brand px-2 py-1.5 rounded-xl cursor-pointer hover:bg-brandHover transition-colors duration-300 shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]'>
                   Explore →
                 </button>
               </form>
@@ -65,7 +76,8 @@ const page = () => {
           </div>
         </div>
       </div>
-         <Stats/>
+      <Stats />
+      <Features/>
     </div>
   )
 }
