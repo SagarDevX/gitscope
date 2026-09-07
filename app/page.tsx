@@ -1,5 +1,6 @@
 import Features from '@/components/Features'
 import Navbar from '@/components/Navbar'
+import PopulerDeveloper from '@/components/PopulerDeveloper'
 import Stats from '@/components/Stats'
 import React from 'react'
 
@@ -77,6 +78,7 @@ const page = () => {
         </div>
       </div>
       <Stats />
+      <PopulerDeveloper/>
       <Features/>
     </div>
   )
