@@ -1,8 +1,9 @@
+"use client"
 import Features from '@/components/Features'
 import Navbar from '@/components/Navbar'
 import PopulerDeveloper from '@/components/PopulerDeveloper'
 import Stats from '@/components/Stats'
-import React from 'react'
+import { motion } from 'motion/react'
 
 const page = () => {
   return (
@@ -52,10 +53,15 @@ const page = () => {
             </div>
 
             <div className='text-center'>
-              <h1 className='tracking-tight leading-[0.9] text-3xl sm:text-6xl font-semibold '>
+              <motion.h1 className='tracking-tight leading-[0.9] text-3xl sm:text-6xl font-semibold '
+                initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
+                whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7 }}
+              >
                 Explore <span className='font-wendy text-brand font-extralight tracking-normal '>GitHub</span><br />
                 Developers
-              </h1>
+              </motion.h1>
 
               <p className='mx-auto w-72 sm:w-xl mt-2 text-md sm:text-lg leading-tight tracking-tight text-neutral-100'>Explore GitHub developers, understand their work,<br /> and discover meaningful insights.</p>
 
@@ -78,8 +84,8 @@ const page = () => {
         </div>
       </div>
       <Stats />
-      <PopulerDeveloper/>
-      <Features/>
+      <PopulerDeveloper />
+      <Features />
     </div>
   )
 }

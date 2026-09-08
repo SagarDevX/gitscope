@@ -20,7 +20,7 @@ type Developer = {
 
 const usernames = [
     "torvalds",
-    "sindresorhus",
+    "Evan You",
     "tj",
     "shadcn",
 ];
@@ -111,7 +111,7 @@ type DeveloperCardProps = {
 
 const DeveloperCard = ({ developer }: DeveloperCardProps) => {
     return (
-        <motion.div className="group flex min-h-100 flex-col rounded-3xl border border-brandBlack bg-[#faf6ee] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand hover:bg-brandBlack hover:text-neutral-400 w-72 ">
+        <motion.div className="group flex h-60 md:h-80  flex-col rounded-3xl border border-brandBlack bg-[#faf6ee] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand hover:bg-brandBlack hover:text-neutral-400 w-72 ">
 
             <div className="flex items-start justify-between">
 
