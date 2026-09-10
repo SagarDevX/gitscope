@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import { motion } from 'motion/react'
 import { SearchIcon, ActivityIcon, UserRoundIcon, BookOpenTextIcon, LightbulbIcon } from "@animateicons/react/lucide";
 
 type FeatureCardProps = {
@@ -54,7 +55,12 @@ const FeatureCard = ({
 
 const Features = () => {
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
+      whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5}}
+    >
       <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-neutral-400 px-3 py-1.5 bg-green-50">
         <span className="relative flex size-2.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
@@ -80,7 +86,11 @@ const Features = () => {
         </p>
       </div>
 
-      <div className="mx-auto my-2 grid w-full max-w-7xl min-h-140 grid-cols-6 gap-4 px-8 sm:px-24 py-8 rounded">
+      <motion.div className="mx-auto my-2 grid w-full max-w-7xl min-h-140 grid-cols-6 gap-4 px-8 sm:px-24 py-8 rounded"
+      initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
+                  whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}>
         <FeatureCard
           className="col-span-6 md:col-span-4 rounded-xl bg-[#FCFBFC] shadow-sm "
           icon={SearchIcon}
@@ -114,8 +124,8 @@ const Features = () => {
           title="Activity insights"
           description="Explore developer activity, contributions and important GitHub insights in one place."
         />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
