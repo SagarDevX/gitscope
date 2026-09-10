@@ -29,16 +29,19 @@ const FeatureCard = ({
       className={` ${className}`}
     >
       <div className="flex items-center justify-center m-1 rounded-t-xl bg-linear-to-b from-gray-300/30 via-gray-300/10 to-transparent p-1 pt-4" >
-        <Icon
-          ref={iconRef}
-          size={48}
-          duration={1}
-          color="#2A835F"
-        />
+
+        <div className="mt-6">
+          <Icon
+            ref={iconRef}
+            size={88}
+            duration={1}
+            color="#2A835F"
+          />
+        </div>
 
       </div>
 
-      <div className=" px-4 py-2 leading-tight">
+      <div className=" mx-4 py-6 leading-tight">
         <h1 className=" font-medium text-brandBlack text-lg">{title}</h1>
 
         <p className="text-sm leading-tight mt-2 text-neutral-700">
@@ -77,19 +80,12 @@ const Features = () => {
         </p>
       </div>
 
-      <div className="mx-auto my-2 grid w-full  max-w-4xl grid-cols-6 gap-4 px-8 sm:px-24 py-8 rounded">
+      <div className="mx-auto my-2 grid w-full max-w-7xl min-h-140 grid-cols-6 gap-4 px-8 sm:px-24 py-8 rounded">
         <FeatureCard
-          className="col-span-6 md:col-span-3 rounded-xl bg-[#FCFBFC] shadow-sm "
+          className="col-span-6 md:col-span-4 rounded-xl bg-[#FCFBFC] shadow-sm "
           icon={SearchIcon}
           title="Developer search"
-          description="Search by username to explore their profile, repositories, activity, and developer insights."
-        />
-
-        <FeatureCard
-          className="col-span-6 md:col-span-3 rounded-xl bg-[#FCFBFC] shadow-sm"
-          icon={ActivityIcon}
-          title="Activity insights"
-          description="Explore developer activity, contributions and important GitHub insights in one place."
+          description="Search any GitHub developer to explore their repositories, coding activity, languages, contributions, and insights - all through one simple, focused experience."
         />
 
         <FeatureCard
@@ -111,6 +107,12 @@ const Features = () => {
           icon={LightbulbIcon}
           title="Developer Insights"
           description="Get useful insights from GitHub data through a clean interactive interface."
+        />
+        <FeatureCard
+          className="col-span-6 md:col-span-2 rounded-xl bg-[#FCFBFC] shadow-sm"
+          icon={ActivityIcon}
+          title="Activity insights"
+          description="Explore developer activity, contributions and important GitHub insights in one place."
         />
       </div>
     </section>

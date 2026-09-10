@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Wendy_One, Inter } from "next/font/google";
 import "./globals.css";
-import Container from "@/components/Container";
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -26,8 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${wendy.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black">
-        
-        <Container>{children}</Container></body>
+        {children}</body>
     </html>
   );
 }
