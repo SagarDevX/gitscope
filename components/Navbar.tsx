@@ -19,10 +19,10 @@ const Navbar = () => {
                         <Link href=''>Features</Link>
                     </div>
 
-                    <div className="">
+                    <div className="group">
                         <button className="flex flex-row items-center px-2 py-1 border-2 border-brand rounded-xl cursor-pointer hover:bg-brand transition-all duration-300">
                             <h2>Github</h2>
-                            <IconArrowUpRight stroke={2} color="#1a1a1a" /> </button>
+                            <IconArrowUpRight stroke={2} color="#1a1a1a" className=" group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300 ease-in-out" /> </button>
                     </div>
                 </div>
 

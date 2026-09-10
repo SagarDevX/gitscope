@@ -1,4 +1,5 @@
 "use client"
+import CTA from '@/components/CTA'
 import Features from '@/components/Features'
 import Navbar from '@/components/Navbar'
 import PopulerDeveloper from '@/components/PopulerDeveloper'
@@ -63,7 +64,13 @@ const page = () => {
                 Developers
               </motion.h1>
 
-              <p className='mx-auto w-72 sm:w-xl mt-2 text-md sm:text-lg leading-tight tracking-tight text-neutral-100'>Explore GitHub developers, understand their work,<br /> and discover meaningful insights.</p>
+              <motion.p className='mx-auto w-72 sm:w-xl mt-2 text-md sm:text-lg leading-tight tracking-tight text-neutral-100'
+              initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
+                whileInView={{ opacity: 1, filter: "blur(0px)", y:0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay:0.4 }}
+              >Explore GitHub developers, understand their work,<br /> and discover meaningful insights.
+              </motion.p>
 
 
               <form className='w-fit sm:bg-brandBlack my-4 text-md sm:text-xl mx-auto p-1 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-8 rounded-xl'>
@@ -86,6 +93,7 @@ const page = () => {
       <Stats />
       <PopulerDeveloper />
       <Features />
+      <CTA/>
     </div>
   )
 }
