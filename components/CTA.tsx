@@ -1,8 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { GithubIcon, ArrowUpRight } from "@animateicons/react/lucide";
-import Link from "next/link";
 
 const CTA = () => {
     return (
@@ -36,15 +34,16 @@ const CTA = () => {
                         and contributions - all in one place.
                     </p>
 
-                    <Link href="/" className=" mt-4 flex w-fit items-center gap-2 rounded-full bg-brand hover:bg-brandHover px-3 py-2 text-md md:px-6 md:py-3.5 font-semibold text-neutral-100 transition-all duration-300 shadow-xl hover:shadow-2xl "
+                    <button  className=" mt-4 flex w-fit items-center gap-2 rounded-full bg-brand hover:bg-brandHover px-3 py-2 text-md md:px-6 md:py-3.5 font-semibold text-neutral-100 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer"
                         onClick={() => {
                             window.scrollTo({
                                 top: 0,
                                 behavior: "smooth",
                             });
                         }}
-                    >Start Exploring</Link>
+                    >Start Exploring</button>
                 </div>
+                
 
                 <div className="absolute opacity-0 md:opacity-50 lg:opacity-100 top-1/2 size-8 md:size-110 -translate-y-1/2 md:right-16 transition-all duration-300"
                 >

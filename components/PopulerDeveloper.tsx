@@ -59,7 +59,7 @@ const mockDevelopers: Developer[] = [
 
 const PopularDeveloper = () => {
   return (
-    <section className="min-h-screen px-6 py-20">
+    <section className=" px-6 py-20">
    
       <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-neutral-400 bg-green-50 px-3 py-1.5">
         <span className="relative flex size-2.5">
@@ -85,7 +85,7 @@ const PopularDeveloper = () => {
         </p>
       </div>
 
-      <div className="mx-auto mt-12 grid max-w-fit grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto mt-12 grid min-w-fit grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
         {mockDevelopers.map((developer, index) => (
           <DeveloperCard
             key={developer.login}
@@ -116,7 +116,7 @@ const DeveloperCard = ({
         duration: 0.6,
         delay: index * 0.1,
       }}
-      className="group flex h-fit w-64  md:w-80 flex-col rounded-3xl border border-neutral-300 bg-[#faf6ee] px-6 py-2 sm:py-6 transition-all duration-500 hover:-translate-y-1   "
+      className="group flex h-fit w-64 mx-auto lg:w-80 flex-col rounded-3xl border border-neutral-300 bg-[#faf6ee] px-6 py-2 sm:py-6 transition-all duration-500 hover:-translate-y-1   "
     >
       <div className="flex items-start justify-between">
         <img
@@ -131,7 +131,7 @@ const DeveloperCard = ({
           rel="noreferrer"
           className="transition-all group-hover:scale-110 duration-300 ease-in-out"
         >
-          <IconBrandGithub size={24} />
+          <IconBrandGithub size={24} color="#54e346"/>
         </a>
       </div>
 
@@ -145,7 +145,7 @@ const DeveloperCard = ({
           delay: 0.3 + index * 0.1,
         }}
       >
-        <h2 className="text-xl font-semibold">
+        <h2 className="text-xl font-semibold text-brandBlack">
           {developer.login}
         </h2>
 
@@ -177,7 +177,7 @@ const DeveloperCard = ({
             </span>
           </div>
 
-          <p className="mt-1 text-lg font-semibold">
+          <p className="mt-1 text-lg font-semibold text-neutral-500">
             {formatNumber(developer.followers)}
           </p>
         </motion.div>
@@ -199,7 +199,7 @@ const DeveloperCard = ({
             </span>
           </div>
 
-          <p className="mt-1 text-lg font-semibold">
+          <p className="mt-1 text-lg font-semibold text-neutral-500">
             {developer.public_repos}
           </p>
         </motion.div>
@@ -210,13 +210,13 @@ const DeveloperCard = ({
           href={developer.html_url}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-0 text-sm font-medium "
+          className="flex items-center gap-1 text-sm font-medium text-brandBlack group-hover:text-brand"
         >
-          <h3 className=" group-hover:scale-110 transition-all duration-500 ease-linear">View Profile</h3>
+          <h3 className=" group-hover:scale-110 transition-all duration-300 ease-linear">View Profile</h3>
 
           <IconArrowUpRight
             size={18}
-            className="transition-transform duration-500 -translate-x-0.5 group-hover:translate-x-1 group-hover:-translate-y-1"
+            className="transition-transform duration-300 -translate-x-0.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
         </a>
       </div>

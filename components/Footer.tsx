@@ -26,15 +26,26 @@ const Footer = () => {
 
                 <div className='flex flex-col gap-6'>
                     <h1 className="text-neutral-200 font-semibold">Product</h1>
-                    <div className="flex flex-col text-neutral-400 gap-4">
-                        <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear"> Explore</Link>
-                        <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">Features</Link>
+                    <div className="flex flex-col text-neutral-500 text-sm gap-4">                   
+                        <button className="hover:text-neutral-200 transition-colors duration-200 ease-linea cursor-pointer text-start"
+                            onClick={() => {
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                });
+                            }}>Explore</button>
+                        <button className="hover:text-neutral-200 transition-colors duration-200 ease-linea cursor-pointer text-start"
+                            onClick={() =>
+                                document.getElementById("features")?.scrollIntoView({
+                                    behavior: "smooth",
+                                })
+                            }>Features</button>
                     </div>
                 </div>
 
                 <div className='flex flex-col gap-6'>
                     <h1 className="text-neutral-200 font-semibold ">Resource</h1>
-                    <div className="flex flex-col text-neutral-400 gap-4">
+                    <div className="flex flex-col text-neutral-500 text-sm gap-4">
                         <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear"> Documentation</Link>
                         <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">GitHub</Link>
                     </div>
@@ -42,7 +53,7 @@ const Footer = () => {
 
                 <div className='flex flex-col gap-6'>
                     <h1 className="text-neutral-200 font-semibold">Product</h1>
-                    <div className="flex flex-col text-neutral-400 gap-4">
+                    <div className="flex flex-col text-neutral-500 text-sm gap-4">
                         <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear"> About</Link>
                         <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">Contact</Link>
                         <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">Privacy</Link>
@@ -54,7 +65,7 @@ const Footer = () => {
             </div>
 
 
-        
+
         </div>
     )
 }

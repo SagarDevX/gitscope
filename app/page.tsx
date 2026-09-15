@@ -4,7 +4,6 @@ import CTA from '@/components/CTA'
 import Features from '@/components/Features'
 import Footer from '@/components/Footer'
 import FooterLogo from '@/components/FooterLogo'
-import Navbar from '@/components/Navbar'
 import PopulerDeveloper from '@/components/PopulerDeveloper'
 import Stats from '@/components/Stats'
 import { motion } from 'motion/react'
@@ -12,7 +11,7 @@ import { motion } from 'motion/react'
 const page = () => {
   return (
     <div className=''>
-      <Container><Navbar />
+      <Container>
         <div className='min-h-fit bg-[#faf8f2] rounded-xl'>
           <div className="relative overflow-hidden min-h-140 md:min-h-175 bg-brandBlack sm:rounded-2xl">
             <div
@@ -58,9 +57,8 @@ const page = () => {
 
               <div className='text-center'>
                 <motion.h1 className='tracking-tight leading-[0.9] text-3xl sm:text-6xl font-semibold '
-                  initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
+                  initial={{ opacity: 0, filter: "blur(20px)", y: 30 }}
                   whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.7 }}
                 >
                   Explore <span className='font-wendy text-brand font-extralight tracking-normal '>GitHub</span><br />
@@ -71,7 +69,7 @@ const page = () => {
                   initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
                   whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  transition={{ duration: 0., delay: 0.4 }}
                 >Explore GitHub developers, understand their work,<br /> and discover meaningful insights.
                 </motion.p>
 
