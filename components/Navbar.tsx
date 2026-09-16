@@ -45,7 +45,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden md:flex flex-row justify-between items-center gap-8">
                     <div className="flex flex-row gap-8">
-                        <Link href=''>Explore</Link>
+                        <Link href='/'>Explore</Link>
                         <Link href='/insights'>Insights</Link>
                         <Link href=''>About</Link>
                         <button className="cursor-pointer" onClick={() =>

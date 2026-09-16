@@ -61,7 +61,7 @@ const PopularDeveloper = () => {
   return (
     <section className=" px-6 py-20">
    
-      <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-neutral-400 bg-green-50 px-3 py-1.5">
+      <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-brand bg-green-50 px-3 py-1.5">
         <span className="relative flex size-2.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
 

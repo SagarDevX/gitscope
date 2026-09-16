@@ -62,7 +62,7 @@ const Features = () => {
       transition={{ duration: 0.5}}
       id="features"
     >
-      <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-neutral-400 px-3 py-1.5 bg-green-50">
+      <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-brand px-3 py-1.5 bg-green-50">
         <span className="relative flex size-2.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
           <span className="relative inline-flex size-2.5 rounded-full bg-brand" />
