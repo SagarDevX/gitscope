@@ -93,11 +93,11 @@ const Navbar = () => {
 
             <motion.div variants={childVariant}>
                 <Link
-                    href=""
+                    href="/insights"
                     onClick={() => setisOpen(false)}
                     className="block w-full hover:bg-neutral-800 p-2 transition-all duration-300 ease-in-out border-t border-neutral-700"
                 >
-                    Compare
+                    Insights
                 </Link>
             </motion.div>
 

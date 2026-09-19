@@ -1,8 +1,36 @@
+"use client"
 import Link from "next/link"
+import { usePathname ,useRouter} from "next/navigation";
+import FooterLogo from "./FooterLogo";
 
 const Footer = () => {
+
+    const pathname = usePathname();
+    const router = useRouter();
+
+    const handleExplore = () => {
+        if (pathname === "/") {
+            document.getElementById("explore")?.scrollIntoView({
+                behavior: "smooth",
+            });
+        } else {
+            router.push("/#explore");
+        }
+    };
+
+    const handleFeatures = () => {
+    if (pathname === "/") {
+      document.getElementById("feature")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      router.push("/#feature");
+    }
+  };
+
     return (
-        <div className='w-full h-fit bg-[#1B1C1E] flex flex-col md:flex-row justify-between gap-8 lg:gap-16 px-8 lg:px-40 pt-4 md:pt-8 md:pb-24 '>
+        <div>
+            <div className='w-full h-fit bg-[#1B1C1E] flex flex-col md:flex-row justify-between gap-8 lg:gap-16 px-8 lg:px-40 pt-4 md:pt-8 md:pb-16 '>
 
             <div className=' mt-24 flex flex-col gap-6 text-white'>
                 <h1 className=' font-wendy font-thin text-4xl leading-[0.9]'>Git<span className='text-brand'>Scope</span></h1>
@@ -26,20 +54,12 @@ const Footer = () => {
 
                 <div className='flex flex-col gap-6'>
                     <h1 className="text-neutral-200 font-semibold">Product</h1>
-                    <div className="flex flex-col text-neutral-500 text-sm gap-4">                   
+                    <div className="flex flex-col text-neutral-500 text-sm gap-4">
                         <button className="hover:text-neutral-200 transition-colors duration-200 ease-linea cursor-pointer text-start"
-                            onClick={() => {
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: "smooth",
-                                });
-                            }}>Explore</button>
+                            onClick={handleExplore}>Explore</button>
                         <button className="hover:text-neutral-200 transition-colors duration-200 ease-linea cursor-pointer text-start"
-                            onClick={() =>
-                                document.getElementById("features")?.scrollIntoView({
-                                    behavior: "smooth",
-                                })
-                            }>Features</button>
+                            onClick={handleFeatures}
+                            >Features</button>
                     </div>
                 </div>
 
@@ -67,6 +87,9 @@ const Footer = () => {
 
 
         </div>
+        <FooterLogo/>
+        </div>
+        
     )
 }
 

@@ -10,10 +10,10 @@ import { motion } from 'motion/react'
 
 const page = () => {
   return (
-    <div className=''>
+    <div className='' id="explore">
       <Container>
         <div className='min-h-fit bg-[#faf8f2] rounded-xl'>
-          <div className="relative overflow-hidden min-h-140 md:min-h-175 bg-brandBlack sm:rounded-2xl">
+          <div className="relative overflow-hidden min-h-140 md:min-h-175 bg-brandBlack sm:rounded-2xl" >
             <div
               className="absolute inset-0 pointer-events-none blur-[35px] md:blur-[50px]"
               style={{
@@ -93,11 +93,10 @@ const page = () => {
         </div>
         <Stats />
         <PopulerDeveloper />
-        <Features />
+        <Features/>
         <CTA />
       </Container>
-      <Footer />
-      <FooterLogo/>
+      
     </div>
   )
 }
