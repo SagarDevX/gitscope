@@ -8,7 +8,7 @@ import BarChart from '@/components/charts/BarChart';
 
 const page = () => {
   return (
-    <Container className='min-h-screen'>
+    <Container className='min-h-screen pt-24 '>
       <div className='w-full h-fit md:h-104 flex flex-col md:flex-row gap-1 my-4'>
         <div className='h-full w-full md:w-1/2 px-8  md:p-24 flex flex-col items-start justify-center text-brandBlack'>
           <div className=" mb-4 flex w-fit items-center gap-2 rounded-full border border-brand px-3 py-1.5 bg-green-50">
@@ -162,11 +162,12 @@ const page = () => {
         </div>
       </div>
 
-      <div className='text-brandBlack mx-8 my-16 flex flex-row'>
-        <div className='w-1/2 flex flex-col justify-center'>
+      <div className='text-white mx-8 my-16 flex flex-col md:flex-row bg-black rounded-xl'>
+
+        <div className='w-full md:w-1/2 flex flex-col justify-center p-4'>
           <h1 className='text-2xl md:text-4xl font-semibold'>Real Data Real Insights</h1>
           <p className='w-80 md:w-120 mt-1 text-md md:text-base leaing-[1.3] tracking-tight'>Dive into deatiled analytics with interactice charts, animated visuals and a clean , modern interface build for developers.</p>
-          <div className='grid grid-cols-2 gap-2 mt-4 w-120'>
+          <div className='grid grid-cols-2 gap-2 mt-4 md:w-120'>
             <div className='flex flex-row gap-2 items-center justify-start'>
               <div className='rounded-full bg-emerald-600 w-fit p-1'><IconCheck stroke={2} color="#ffffff" size={16} /></div>
               <h4 className='text-sm'>Live Charts</h4>
@@ -189,11 +190,21 @@ const page = () => {
           </div>
         </div>
 
-        <div className='w-1/2 bg-brandBlack rounded-2xl py-4 '>
-          <div className='grid grid-cols-2 gap-2'>
-            <div className='col-span-2 mx-8  '><AreaChart /></div>
-            <div className='col-span-1 mx-auto'><PieChartComponent/></div>
-            <div className='col-span-1 '><BarChart/></div>
+        <div className='w-full md:w-1/2 bg-brandBlack rounded-2xl py-4 mt-4 md:mt-0 '>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full h-fit">
+
+            <div className="col-span-2 w-full min-w-0 px-4 md:px-8">
+              <AreaChart />
+            </div>
+
+            <div className="hidden lg:flex items-center justify-center w-full min-w-0 ">
+              <PieChartComponent />
+            </div>
+
+            <div className="w-full min-w-0 px-4 md:px-8">
+              <BarChart />
+            </div>
+
           </div>
         </div>
       </div>

@@ -5,31 +5,53 @@
   --foreground: #171717;
   --brand: #54e346;
   --brandHover: #45C83A;
-  --beidge: #FFF7EB ;
-  --brandBlack: #050705;
+  --gray: #f1f1f1 ;
+  --brandWhite: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
-  --color-beidge: var(--beidge);
+  --color-gray: var(--gray);
   --color-brandBlack: var(--brandBlack);
   --color-brandHover: var(--brandHover);
   --font-sans: var(--font-inter);
   --font-wendy: var(--font-wendy_one);
+  --font-hedvig: var(--font-hedvig_letters_serif);
   
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+body {
+  background: var(--brandWhite);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(-5%) translateY(0) scaleY(1);
+  }
+
+  25% {
+    transform: translateX(-2%) translateY(-18px) scaleY(1.04);
+  }
+
+  50% {
+    transform: translateX(5%) translateY(4px) scaleY(0.98);
+  }
+
+  75% {
+    transform: translateX(2%) translateY(-14px) scaleY(1.03);
+  }
+
+  100% {
+    transform: translateX(-5%) translateY(0) scaleY(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+.wave-path {
+  transform-origin: center;
+  animation: waveMove 3.5s ease-in-out infinite;
 }

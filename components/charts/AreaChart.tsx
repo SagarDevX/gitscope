@@ -82,7 +82,7 @@ const AreaChart = ({
                     />
 
                     <YAxis
-                        width="auto"
+                        width={30}
                         domain={[0, 60]}
                         ticks={[0, 20, 40, 60]}
                         tickLine={false}

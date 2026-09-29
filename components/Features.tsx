@@ -36,7 +36,7 @@ const FeatureCard = ({
             ref={iconRef}
             size={88}
             duration={1}
-            color="#2A835F"
+            color="#54e346"
           />
         </div>
 
@@ -60,6 +60,7 @@ const Features = () => {
       whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5}}
+      className="my-16"
       id="feature"
     >
       <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-brand px-3 py-1.5 bg-green-50">
@@ -74,7 +75,7 @@ const Features = () => {
       </div>
 
       <div className="mx-auto w-fit text-center text-brandBlack">
-        <h1 className="text-xl font-semibold md:text-4xl">
+        <h1 className="text-xl font-semibold md:text-4xl font-hedvig">
           Explore <span className="text-brand">beyond </span>
           the profile
         </h1>

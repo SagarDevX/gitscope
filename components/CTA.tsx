@@ -4,7 +4,7 @@ import { GithubIcon, ArrowUpRight } from "@animateicons/react/lucide";
 
 const CTA = () => {
     return (
-        <section className="px-6 py-20">
+        <section className="px-6 pb-20">
             <div
                 className="relative mx-auto flex h-fit max-w-7xl overflow-hidden rounded-[40px] bg-[#eef1f5] shadow-[12px_12px_24px_#c8cdd3,-12px_-12px_24px_#ffffff] px-8 md:px-16 py-12 md:py-16 ">
 
@@ -25,7 +25,7 @@ const CTA = () => {
                     </div>
 
 
-                    <h1 className="max-w-xl text-2xl font-semibold leading-[1.05] tracking-tight text-brandBlack md:text-3xl">
+                    <h1 className="font-hedvig max-w-xl text-2xl font-semibold leading-[1.05] tracking-tight text-brandBlack md:text-3xl">
                         Ready to discover the people behind the code?
                     </h1>
 

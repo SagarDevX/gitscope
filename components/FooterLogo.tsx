@@ -6,7 +6,7 @@ const FooterLogo = () => {
     <div className="w-full select-none ">
       <div className="relative overflow-hidden bg-[#1B1C1E] text-neutral-500">
 
-        <h1 className="m-0 pt-4 text-[clamp(105px,25vw,350px)] leading-none md:tracking-tighter tracking-[-0.09em] lg:tracking-[0.06]">
+        <h1 className="m-0 pt-4 text-[clamp(105px,25vw,350px)] text-center leading-none md:tracking-tighter tracking-[-0.09em] lg:tracking-[0.06]">
           GitScope
         </h1>
 

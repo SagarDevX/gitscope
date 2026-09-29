@@ -103,10 +103,10 @@ export default function PieChartComponent({
     defaultIndex?: TooltipIndex;
 }) {
     return (
-        <div className="w-fit h-fit p-2 flex flex-col rounded-2xl bg-black/2 backdrop-blur-xs border border-white/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]  ">
+        <div className="w-full mx-8 h-fit p-2 flex flex-col rounded-2xl bg-black/2 backdrop-blur-xs border border-white/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]  ">
             <h1 className="text-lg text-white">Project focus</h1>
 
-            <div className="w-full h-fit flex flex-row">
+            <div className="w-full min-w-0 flex items-center gap-2">
                 <PieChart
                     responsive
                     style={{
@@ -138,7 +138,7 @@ export default function PieChartComponent({
                     />
                 </PieChart>
 
-                <div className="flex flex-col items-start justify-center text-xs gap-2 text-white">
+                <div className="min-w-0 flex flex-col items-start justify-center text-xs gap-2 text-white">
                     <h3>
                         <span className="text-[#F62440]">■</span>
                         Web Development

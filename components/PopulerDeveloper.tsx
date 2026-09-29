@@ -59,7 +59,7 @@ const mockDevelopers: Developer[] = [
 
 const PopularDeveloper = () => {
   return (
-    <section className=" px-6 py-20">
+    <section className=" px-6 ">
    
       <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-brand bg-green-50 px-3 py-1.5">
         <span className="relative flex size-2.5">
@@ -74,7 +74,7 @@ const PopularDeveloper = () => {
       </div>
 
       <div className="mx-auto w-fit text-center text-brandBlack">
-        <h1 className="text-xl font-semibold md:text-4xl">
+        <h1 className="text-2xl font-semibold font-hedvig md:text-4xl">
           Discover{" "}
           <span className="text-brand">popular </span>
           Developers
@@ -114,9 +114,9 @@ const DeveloperCard = ({
       viewport={{ once: true }}
       transition={{
         duration: 0.6,
-        delay: index * 0.1,
+        delay: index * 0.15,
       }}
-      className="group flex h-fit w-64 mx-auto lg:w-80 flex-col rounded-3xl border border-neutral-300 bg-[#faf6ee] px-6 py-2 sm:py-6 transition-all duration-500 hover:-translate-y-1   "
+      className="group flex h-fit w-64 mx-auto lg:w-80 flex-col rounded-3xl border border-neutral-300 bg-gray px-6 py-2 sm:py-6 transition-all duration-500 hover:-translate-y-1   "
     >
       <div className="flex items-start justify-between">
         <img
@@ -210,7 +210,7 @@ const DeveloperCard = ({
           href={developer.html_url}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-1 text-sm font-medium text-brandBlack group-hover:text-brand"
+          className="flex items-center gap-1 text-sm font-medium text-brandBlack group-hover:text-[#54c449]"
         >
           <h3 className=" group-hover:scale-110 transition-all duration-300 ease-linear">View Profile</h3>
 
