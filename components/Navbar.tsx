@@ -3,7 +3,7 @@ import { IconArrowUpRight, IconMenu2, IconX } from "@tabler/icons-react"
 import Link from "next/link"
 import { useState } from "react"
 import Container from "./Container"
-import { AnimatePresence, motion} from "motion/react"
+import { AnimatePresence, motion } from "motion/react"
 import { usePathname, useRouter } from "next/navigation";
 
 
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <div className="hidden md:flex flex-row justify-between items-center gap-8">
                     <div className="flex flex-row gap-8">
                         <button
-                        onClick={handleExplore}
+                            onClick={handleExplore}
                             className="group relative py-1 cursor-pointer"
                         >
                             Explore
@@ -121,15 +121,19 @@ const Navbar = () => {
                         animate="visible"
                         exit="hidden"
                     >
+
                         <motion.div variants={childVariant}>
-                            <Link
-                                href=""
-                                onClick={() => setisOpen(false)}
-                                className="block w-full hover:bg-neutral-800 p-2 transition-all duration-300 ease-in-out"
+                            <button
+                                onClick={() => {
+                                    handleExplore();
+                                    setisOpen(false);
+                                }}
+                                className="flex items-start w-full hover:bg-neutral-800 p-2 transition-all duration-300 ease-in-out border-t border-neutral-700"
                             >
                                 Explore
-                            </Link>
+                            </button>
                         </motion.div>
+
 
                         <motion.div variants={childVariant}>
                             <Link
@@ -141,23 +145,26 @@ const Navbar = () => {
                             </Link>
                         </motion.div>
 
+
+
+                        <motion.div variants={childVariant}>
+                            <button
+                                className="flex items-start w-full hover:bg-neutral-800 p-2 transition-all duration-300 ease-in-out border-t border-neutral-700"
+                                onClick={() => {
+                                    handleFeatures();
+                                    setisOpen(false);
+                                }}
+                            >
+                                Features
+                            </button>
+                        </motion.div>
                         <motion.div variants={childVariant}>
                             <Link
-                                href=""
+                                href="/about"
                                 onClick={() => setisOpen(false)}
                                 className="block w-full hover:bg-neutral-800 p-2 transition-all duration-300 ease-in-out border-t border-neutral-700"
                             >
                                 About
-                            </Link>
-                        </motion.div>
-
-                        <motion.div variants={childVariant}>
-                            <Link
-                                href=""
-                                onClick={() => setisOpen(false)}
-                                className="block w-full hover:bg-neutral-800 p-2 transition-all duration-300 ease-in-out border-t border-neutral-700"
-                            >
-                                Features
                             </Link>
                         </motion.div>
                     </motion.div>
