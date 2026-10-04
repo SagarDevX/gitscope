@@ -9,7 +9,7 @@ const page = () => {
       </div>
 
       <div className=' flex flex-col  md:flex-row gap-8 border border-neutral-300 m-2 text-brandBlack px-8 md:px-24 py-8 rounded-2xl '>
-        <div className='w-full md:w-1/2 text-3xl font-semibold'><h1>Get Started</h1></div>
+        <div className='w-full md:w-1/2 text-2xl md:text-3xl font-semibold'><h1>Get Started</h1></div>
         <div className='w-full md:w-1/2 flex flex-col gap-8 '>
           <div className='w-full flex flex-col gap-1 items-start justify-center'>
 
@@ -35,7 +35,7 @@ const page = () => {
 
 
       <div className=' flex flex-col md:flex-row gap-8 border border-neutral-300 m-2 text-brandBlack  px-8 md:px-24 py-8 rounded-2xl '>
-        <div className='w-full md:w-1/2 text-3xl font-semibold'><h1>Developer Dashboard</h1></div>
+        <div className='w-full md:w-1/2 text-2xl md:text-3xl font-semibold'><h1>Developer Dashboard</h1></div>
         <div className='w-full md:w-1/2 flex flex-col gap-8 '>
           <div className='w-full flex flex-col gap-1 items-start justify-center'>
 
@@ -64,8 +64,8 @@ const page = () => {
       </div>
 
 
-      <div className=' flex flex-row gap-8 border border-neutral-300 m-2 text-brandBlack px-8 md:px-24 py-8 rounded-2xl '>
-        <div className='w-full md:w-1/2 text-3xl font-semibold'><h1>Data Sources</h1></div>
+      <div className=' flex flex-col md:flex-row gap-4 md:gap-8 border border-neutral-300 m-2 text-brandBlack px-8 md:px-24 py-8 rounded-2xl '>
+        <div className='w-full md:w-1/2 text-2xl md:text-3xl font-semibold'><h1>Data Sources</h1></div>
         <div className='w-full md:w-1/2 flex flex-col gap-8 '>
           <p>GitHub uses publicly available information from the GitHub API. The data show can change as Github profiles and Repositories are updated.
           </p>
@@ -73,8 +73,8 @@ const page = () => {
       </div>
 
 
-      <div className=' flex flex-row gap-8 border border-neutral-300 m-2 text-brandBlack px-8 md:px-24 py-8 rounded-2xl '>
-        <div className='w-full md:w-1/2 text-3xl font-semibold'><h1>Limitation</h1></div>
+      <div className=' flex flex-col md:flex-row gap-4 md:gap-8 border border-neutral-300 m-2 text-brandBlack px-8 md:px-24 py-8 rounded-2xl '>
+        <div className='w-full md:w-1/2 text-2xl md:text-3xl font-semibold'><h1>Limitation</h1></div>
         <div className='w-full md:w-1/2 flex flex-col gap-8 '>
           <p>GitScope does not have access to every GitHub metric. Some contribution and activity statistics are limited by the data available through GitHub's public API.</p>
 

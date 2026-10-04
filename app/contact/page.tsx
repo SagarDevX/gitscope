@@ -72,7 +72,7 @@ const page = () => {
                                 </div>
 
                                 <div className="px-2">
-                                    <h3 className="text-2xl md:text-xl font-semibold">
+                                    <h3 className="text-xl md:text-xl font-semibold">
                                         {contact.title}
                                     </h3>
 
