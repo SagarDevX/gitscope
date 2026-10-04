@@ -21,10 +21,64 @@ const hedvig = Hedvig_Letters_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "GitScope",
-  description: "Explore GitHub developers, understand their work, and discover meaningful insights.",
+  metadataBase: new URL("https://gitscope-x.vercel.app/"),
+
+  title: {
+    default: "GitScope - Explore GitHub Developers",
+    template: "%s | GitScope",
+  },
+
+  description:
+    "Explore GitHub developers, repositories, programming languages, and activity insights with GitScope.",
+
+  keywords: [
+    "GitHub developer explorer",
+    "GitHub developer search",
+    "GitHub profile analyzer",
+    "GitHub repository explorer",
+    "GitHub insights",
+    "developer insights",
+    "GitHub analytics",
+    "GitHub developers",
+  ],
+
+  authors: [{ name: "Sagar" }],
+
+  creator: "Sagar",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
-    images: ["/og-image.png"],
+    title: "GitScope - Explore GitHub Developers",
+    description:
+      "Explore GitHub developers, repositories, programming languages, and activity insights.",
+    url: "https://gitscope-x.vercel.app/",
+    siteName: "GitScope",
+    images: [
+      {
+        url: "/GitScope.png",
+        width: 1200,
+        height: 630,
+        alt: "GitScope — Explore GitHub Developers",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "GitScope - Explore GitHub Developers",
+    description:
+      "Explore GitHub developers, repositories, programming languages, and activity insights.",
+    images: ["/GitScope.png"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 

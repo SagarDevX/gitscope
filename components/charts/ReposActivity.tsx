@@ -30,7 +30,7 @@ export default function RepositoryActivity({
                 Repository updates over time
             </p>
 
-            <div className="mt-6 w-82 md:w-full h-56  md:h-64">
+            <div className="mt-6 w-85 md:w-full h-56  md:h-64">
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart
                         data={data}

@@ -21,7 +21,7 @@ export default function TopLanguages({
     }
 
     return ( 
-        <div className="w-90 md:w-full rounded-2xl border border-neutral-200 py-6 px-7">
+        <div className="w-93 md:w-full rounded-2xl border border-neutral-200 py-6 px-7">
             <h2 className="text-2xl  font-semibold">
                 Top Languages
             </h2>
