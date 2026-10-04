@@ -115,7 +115,7 @@ const Navbar = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="md:hidden min-h-dvh absolute z-50 top-16 left-0 w-full mt-2 bg-black px-2 py-2 text-white"
+                        className="md:hidden min-h-screen absolute z-50 top-16 left-0 w-full mt-2 bg-black px-2 py-2 text-white"
                         variants={parentvariant}
                         initial="hidden"
                         animate="visible"

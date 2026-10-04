@@ -23,6 +23,9 @@ const hedvig = Hedvig_Letters_Serif({
 export const metadata: Metadata = {
   title: "GitScope",
   description: "Explore GitHub developers, understand their work, and discover meaningful insights.",
+  openGraph: {
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

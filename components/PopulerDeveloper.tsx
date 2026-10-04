@@ -116,7 +116,7 @@ const DeveloperCard = ({
         duration: 0.6,
         delay: index * 0.15,
       }}
-      className="group flex h-fit w-64 mx-auto lg:w-80 flex-col rounded-3xl border border-neutral-300 bg-gray px-6 py-2 sm:py-6 transition-all duration-500 hover:-translate-y-1   "
+      className="group flex h-fit w-80 md:w-64 mx-auto lg:w-80 flex-col rounded-3xl border border-neutral-300 bg-gray px-6 py-2 sm:py-6 transition-all duration-500 hover:-translate-y-1   "
     >
       <div className="flex items-start justify-between">
         <img
