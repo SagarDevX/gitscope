@@ -77,7 +77,7 @@ const Footer = () => {
                         <h1 className="text-neutral-200 font-semibold">Product</h1>
                         <div className="flex flex-col text-neutral-500 text-sm gap-4">
                             <Link href='/about' className="hover:text-neutral-200 transition-colors duration-200 ease-linear"> About</Link>
-                            <Link href='/' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">Contact</Link>
+                            <Link href='/contact' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">Contact</Link>
                             <Link href='/privacy' className="hover:text-neutral-200 transition-colors duration-200 ease-linear">Privacy</Link>
                         </div>
                     </div>

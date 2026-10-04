@@ -10,7 +10,7 @@ const page = () => {
   return (
     <Container className='min-h-screen pt-24 '>
       <div className='w-full h-fit md:h-104 flex flex-col md:flex-row gap-1 my-4'>
-        <div className='h-full w-full md:w-1/2 px-8  md:p-24 flex flex-col items-start justify-center text-brandBlack'>
+        <div className='h-full w-full md:w-1/2 px-8  md:p-8 flex flex-col items-start justify-center text-brandBlack'>
           <div className=" mb-4 flex w-fit items-center gap-2 rounded-full border border-brand px-3 py-1.5 bg-green-50">
             <span className="relative flex size-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
@@ -22,8 +22,8 @@ const page = () => {
             </span>
           </div>
 
-          <h1 className='text-2xl font-semibold md:text-5xl'>Powerful <span className='text-brand'>insights</span>  <br />for better developers</h1>
-          <p className='mt-1 text-md leading-[1.3] tracking-tight md:text-base w-72 md:w-120'>GitScope turnsraw GitHub data into beautiful , easy to understand  insights. Explore contributions, commits, repositories and more - all in one place.</p>
+          <h1 className='text-2xl font-semibold md:text-5xl font-hedvig'>Powerful <span className='text-brand'>insights</span>  <br />for better developers</h1>
+          <p className='mt-1 text-md leading-[1.3] tracking-tight md:text-base w-72 md:w-120'>GitScope turns raw GitHub data into beautiful , easy to understand  insights. Explore contributions, commits, repositories and more - all in one place.</p>
         </div>
         <div className='relative mt-4 md: w-full md:w-1/2 h-full overflow-hidden shadow-[0_0_50px_rgba(84,227,70,0.35)]'>
           <div className='absolute inset-0 '><video src="/aurora-background.mp4" loop autoPlay muted playsInline
@@ -92,7 +92,7 @@ const page = () => {
 
       <div className='text-brandBlack my-16 p-8 bg-white border border-white/30 rounded-2xl'>
         <div className=''>
-          <h1 className='text-2xl font-semibold md:text-4xl'>Everthing you need  <br /><span className='text-brand'> to understand a developer.</span></h1>
+          <h1 className='text-2xl font-semibold md:text-4xl font-hedvig'>Everthing you need  <br /><span className='text-brand'> to understand a developer.</span></h1>
           <p className='w-80 md:w-120'>
             From contribution to language. Gitscope gives you a  complete picture of a developer's journey - with clean ,  animated charts and modern UI.
           </p>
@@ -165,7 +165,7 @@ const page = () => {
       <div className='text-white mx-8 my-16 flex flex-col md:flex-row bg-black rounded-xl'>
 
         <div className='w-full md:w-1/2 flex flex-col justify-center p-4'>
-          <h1 className='text-2xl md:text-4xl font-semibold'>Real Data Real Insights</h1>
+          <h1 className='text-2xl md:text-4xl font-semibold font-hedvig'>Real Data Real Insights</h1>
           <p className='w-80 md:w-120 mt-1 text-md md:text-base leaing-[1.3] tracking-tight'>Dive into deatiled analytics with interactice charts, animated visuals and a clean , modern interface build for developers.</p>
           <div className='grid grid-cols-2 gap-2 mt-4 md:w-120'>
             <div className='flex flex-row gap-2 items-center justify-start'>
