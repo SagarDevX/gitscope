@@ -21,7 +21,7 @@ export default function TopLanguages({
     }
 
     return ( 
-        <div className="w-fit md:w-full rounded-2xl border border-neutral-200 py-6 px-7">
+        <div className="w-90 md:w-full rounded-2xl border border-neutral-200 py-6 px-7">
             <h2 className="text-2xl  font-semibold">
                 Top Languages
             </h2>
@@ -30,7 +30,7 @@ export default function TopLanguages({
                 Language distribution across repositories
             </p>
 
-            <div className="w-screen md:w-full flex items-center justify-center">
+            <div className="w-full flex items-center justify-center">
                 <div className=" size-58 ">
                     <ResponsiveContainer>
                         <PieChart>
@@ -70,9 +70,9 @@ export default function TopLanguages({
             </div>
 
 
-            <div className="text-center text-xl md:text-sm grid grid-cols-2 md:grid-cols-3 gap-2">
+            <div className=" text-xl md:text-sm grid grid-cols-2 md:grid-cols-3 gap-2">
                 {languages.map((item, idx) => (
-                    <div key={item.name} className="flex items-center gap-2 justify-start">
+                    <div key={item.name} className="flex items-center gap-2 justify-start text-center">
                         <span
                             className="size-2 rounded-full"
                             style={{

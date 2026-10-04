@@ -19,7 +19,7 @@ export default function PopularRepos({
         .slice(0, 4);
 
     return (
-        <div className="w-fit border border-neutral-200 rounded-2xl px-6 pt-4">
+        <div className="w-full min-w-0 overflow-hidden border border-neutral-200 rounded-2xl px-4 md:px-6 pt-4">
             <h2 className="text-2xl font-semibold">
                 Popular Repositories
             </h2>
@@ -32,24 +32,24 @@ export default function PopularRepos({
                 {popularRepos.map((repo) => (
                     <div
                         key={repo.id}
-                        className="flex items-center justify-between border-b border-neutral-100 pb-4 last:border-0"
+                        className="flex min-w-0 w-full items-center justify-between gap-3 border-b border-neutral-100 pb-4 last:border-0"
                     >
-                        <div className="min-w-0">
+                        <div className="min-w-0 flex-1">
                             <Link
                                 href={repo.html_url}
                                 target="_blank"
-                                className="text-xl md:text-base font-semibold hover:text-brand transition-colors duration-200 ease-in-out"
+                                className="block truncate text-lg md:text-base font-semibold hover:text-brand transition-colors duration-200 ease-in-out"
                             >
                                 {repo.name}
                             </Link>
 
-                            <p className="w-82 md:w-104 text-sm text-neutral-500 truncate">
+                            <p className="truncate text-sm text-neutral-500">
                                 {repo.description || "No description"}
                             </p>
                         </div>
 
-                        <div className="ml-4 shrink-0 text-sm">
-                             ☆ {repo.stargazers_count}
+                        <div className="shrink-0 text-sm">
+                            ☆ {repo.stargazers_count}
                         </div>
                     </div>
                 ))}

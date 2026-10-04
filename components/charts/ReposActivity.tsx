@@ -20,7 +20,7 @@ export default function RepositoryActivity({
     }
 
     return (
-        <div className="w-fit md:w-full min-w-0 rounded-2xl border border-neutral-200 p-4 md:p-6">
+        <div className="w-fit md:w-full rounded-2xl border border-neutral-200 p-4 md:p-6">
 
             <h2 className="text-2xl md:text-2xl font-semibold">
                 Repository Activity
@@ -30,14 +30,14 @@ export default function RepositoryActivity({
                 Repository updates over time
             </p>
 
-            <div className="mt-6 w-104 md:w-full h-56  md:h-64">
+            <div className="mt-6 w-82 md:w-full h-56  md:h-64">
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart
                         data={data}
                         margin={{
                             top: 5,
-                            right: 5,
-                            left: -20,
+                            right: 0,
+                            left:-30,
                             bottom: 5,
                         }}
                     >

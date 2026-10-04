@@ -58,18 +58,18 @@ const page = async ({ params }:
     return (
         <div className="pt-22">
 
-            <div className="h-fit flex justify-between p-8 md:p-16 border border-neutral-200 m-2 rounded-xl ">
+            <div className="h-fit flex justify-between p-4 md:p-16 border border-neutral-200 m-2 rounded-xl ">
 
-                <div className="flex flex-col gap-8 min-w-xl" >
-                    <div className="h-fit flex flex-row gap-8 ">
+                <div className="flex flex-col gap-4 md:gap-8 " >
+                    <div className="h-fit flex flex-row gap-4 md:gap-8 ">
                         <img
                             src={data.avatar_url}
                             alt={data.name || "GitHub avatar"}
-                            className="size-32 rounded-full object-cover border border-neutral-100"
+                            className="size-24 md:size-32 rounded-full object-cover border border-neutral-100"
                         />
                         <div className="flex flex-col">
                             <div>
-                                <h1 className="text-4xl text-black font-semibold">{data.name}</h1>
+                                <h1 className="text-3xl md:text-4xl text-black font-semibold">{data.name}</h1>
                                 <p className="text-xl">@{data.login}</p>
                                 <p>{data.bio}</p>
                             </div>
@@ -131,7 +131,7 @@ const page = async ({ params }:
                 </div>
             </div>
 
-            <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-3 m-2">
+            <div className="w-full px-2 grid gap-4 grid-cols-1 md:grid-cols-3">
                 <TopLanguages languages={languages} />
 
                 <RepositoryActivity data={repositoryActivity} />
